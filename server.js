@@ -14,7 +14,6 @@ const app = express();
 // DATABASE & PASSPORT 
 
 
-
 // CONFIGURATION
 app.set('view engine', 'ejs');
 const PORT = 3000;
