@@ -1,2 +1,2 @@
 # dev-brainstorm
-Vince
+Vince Laquindanum & Chris Ladd
