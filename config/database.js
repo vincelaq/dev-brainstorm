@@ -14,7 +14,7 @@ mongoose
 	.connect(process.env.DATABASE_URL || dbUrl, configs)
 	.then(() =>
 		console.log(
-			`MongoDB successfully connected at ${db.host}:${db.port}! How dope!`
+			`MongoDB successfully connected at ${db.host}:${db.port}! SICK!`
 		)
 	)
 	.catch((err) => console.log(`MongoDB connection FAILED :( Error: ${err}`)

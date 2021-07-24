@@ -37,7 +37,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // ROUTES
-app.get("/", (req, res) => { res.render("index")});
+app.get("/", (req, res) => { res.render("index") });
 app.get("/dashboard", routes.dashboard);
 app.get("/auth/github", routes.auth);
 app.get("/auth/github/callback", routes.auth);
