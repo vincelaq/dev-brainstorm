@@ -18,11 +18,7 @@ require('./config/database');
 require('./config/passport');
 
 // CONFIGURATION
-app.set('view engine', 'ejs');
-const PORT = process.env.PORT;
-if (PORT == null || PORT == '') {
-    PORT = 3000;
-};
+app.set('view engine', 'ejs');heroku
 
 // MIDDLEWARE
 app.use(logger('dev'));
@@ -47,6 +43,6 @@ app.get("/auth/github/callback", routes.auth);
 app.get("/logout", routes.auth);
 
 // LISTENER
-app.listen(PORT, () => { 
+app.listen(process.env.PORT || 3000, () => { 
     console.log(`Express is listening on port: ${PORT}`);
 });
