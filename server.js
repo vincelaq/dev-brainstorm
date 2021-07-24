@@ -19,7 +19,10 @@ require('./config/passport');
 
 // CONFIGURATION
 app.set('view engine', 'ejs');
-const PORT = 3000;
+const PORT = process.env.PORT;
+if (PORT == null || PORT == '') {
+    PORT = 3000;
+};
 
 // MIDDLEWARE
 app.use(logger('dev'));
