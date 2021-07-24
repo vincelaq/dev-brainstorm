@@ -4,5 +4,7 @@ module.exports = {
 }
 
 function index (req, res) {
-    res.render('dashboard/index');
+    res.render('dashboard/index', {
+        user: req.user,
+    });
 };
