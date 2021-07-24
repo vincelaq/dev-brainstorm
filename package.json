@@ -1,0 +1,24 @@
+{
+  "name": "dev-brainstorm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincelaq/dev-brainstorm.git"
+  },
+  "author": "Vincent Laquindanum, Chris Ladd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vincelaq/dev-brainstorm/issues"
+  },
+  "homepage": "https://github.com/vincelaq/dev-brainstorm#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
