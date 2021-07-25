@@ -1,4 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 #avatar-icon {
     width: 44px;
     border-radius: 50%;
+}
+#logo {
+    width: 224px;
+}
+#nav-header {
+    margin: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+#nav-menu {
+    display: flex;
+    justify-content: right;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+#main-container {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    height: 80vh;
+}
+#center {
+    width: 45%;
+    min-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#left-pane-title {
+    
+    border: 1px solid white; 
+    margin-right: auto;
+}
+#page-title {
+    color: #05d9e8;
+    font-size: 56px;
+    letter-spacing: 8px;
+    writing-mode: vertical-rl;
+}
+#page-desc {
+    color: #ff2a6d;
+    font-size: 10px;
+    letter-spacing: 0;
+    line-height: 10px;
+    writing-mode: vertical-rl;
+    text-align: right;
+    margin-left: 24px;
+}
+#left {
+    display: flex;
+    flex-direction: column-reverse;
+}
+#post-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+#post-button {
+    background-color: transparent;
+    text-align: right;
+    color: #ff2a6d;
+    border: none;
+    letter-spacing: 2px;
+}
+.nav-link {
+    margin: 10px 12px;
+}
+.main-divider {
+    border: 1px solid yellow;
+    width: 28%;
+}
+.hr {
+    border: 1px solid #ff2a6d;
+    width: 512px;
+}
+.post-text {
+    width: 500px;
+    height: 26px;
+    background-color: transparent; 
+    border: none;
+    color: #d1f7ff;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+a {
+    color: #d1f7ff;
+    text-decoration: none;
+}
+body {
+    background-color: #01012b;
+    font-family: 'Quicksand', sans-serif;
+}
+footer {
+    color: #ff2a6d;
+    text-align: right;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-top: auto;
+    padding: 25px 10px;
 }
