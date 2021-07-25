@@ -20,6 +20,7 @@ passport.use(
                     const newUser = new User({
                         name: profile.displayName,
                         username: profile.username,
+                        avatar: profile.photos[0].value,
                         email: profile.email,
                         githubId: profile.id,
                     });
