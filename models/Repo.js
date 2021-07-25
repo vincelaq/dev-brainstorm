@@ -6,8 +6,8 @@ const repoSchema = new Schema(
     {
         title: { type: String, required: true },
         content: { type: String, required: true },
-        date: { type: Date, default: Date.now },
-        user: { type: Schema.Types.ObjectId, ref:"User" },
+        user: { type: String, required: true },
+        githubId: { type: String, required: true}
         // upVotes: [{ type: Schema.Types.ObjectId, ref: "Upvote" }], 
     },
     {
