@@ -1,7 +1,34 @@
 <%- include('../partials/header') %>
+<div id="main-container">
+    <section id="left" class="main-divider">
+        <div id="left-pane-title">
+            <div id="page-desc">
+                // the dashboard is a place where you can see <br>
+                // your posts and post new ideas for people to comment on.<br>
+                // It also has a snapshot of your profile.<br>
+            </div><br>
+            <div id="page-title">
+                DASHBOARD
+            </div>
+            
+        </div>
+    </section>
+    <section id="center" class="main-divider">
+        <div id="enter-post-container">
+            <form id="post-form">
+                <input id="post-title" class="post-text" type="text" value="TITLE">
+                <input id="post-pitch" class="post-text" type="text" value="PITCH">
+                <div class="hr"></div>
+                <input id="post-button" type="submit" value="POST">
+            </form>
+        </div>
 
-<h1>DASHBOARD PAGE</h1>
-<p>Hello World!</p>
-<a href="/logout">logout</a>
+    </section>
+    <section id="right" class="main-divider">
+        
+    </section>
+</div>
+
+
 
 <%- include('../partials/footer') %>
