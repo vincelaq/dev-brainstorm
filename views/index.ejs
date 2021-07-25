@@ -4,11 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LANDING PAGE</title>
+    <title>HackedIn PAGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style>
+        html {
+            min-height: 100%;
+            background-image: url("../css/images/homescreen.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-attachment: fixed;
+        }
+        body {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .homePage {
+            color: #39FF14;
+            display: inline-block;
+            margin-top: 275px;
+            margin-right: auto;
+            margin-left: 400px;
+            text-align: center;
+            box-shadow: #ff007f;
+        }
+        strong {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>LANDING PAGE</h1>
-    <p>Hello World!</p>
-    <a href="/auth/github">login with github</a>
+    <div class="homePage">
+        <div id=hackedIn>
+            <h2>Welcome to <h1>HackedIn!</h1></h2>
+        </div>
+        <div>
+            <h2>Login or <a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home" Signup with GitHub</p>
+            <a href="/auth/github">Signup </a>with GitHub</h2>
+        </div>
+    </div>
+
 </body>
 </html>
