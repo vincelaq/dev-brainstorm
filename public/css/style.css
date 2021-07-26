@@ -55,6 +55,10 @@
     display: flex;
     flex-direction: column-reverse;
 }
+#right {
+    min-width: 400px;
+    min-height: 600px;
+}
 #post-form {
     display: flex;
     flex-direction: column;
