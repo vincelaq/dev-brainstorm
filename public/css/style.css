@@ -157,6 +157,7 @@
 .post-box {
     border: 1px solid #005678;
     width: 512px;
+    margin-bottom: 12px;
 }
 .post-box-header{
     color: #05d9e8;
@@ -192,3 +193,7 @@ footer {
     margin-top: auto;
     padding: 25px 10px;
 }
+::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }

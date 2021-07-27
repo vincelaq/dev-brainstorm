@@ -1,7 +1,7 @@
 // INDEX MODELS (HUB)
 module.exports = {
 	User: require("./User"),
-	Post: require("./Posts"),
+	Post: require("./Post"),
 	Comment: require("./Comment"),
 	Repo: require("./Repo"),
 };

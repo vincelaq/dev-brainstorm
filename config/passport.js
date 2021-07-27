@@ -11,7 +11,6 @@ passport.use(
             callbackURL: process.env.GITHUB_CALLBACK,
         },
         function (accessToken, refreshToken, profile, cb) {
-            console.log(profile);
             User.findOne({ githubId: profile.id }, (err, user) => {
                 if (err) return cb(err);
                 if (user) {
