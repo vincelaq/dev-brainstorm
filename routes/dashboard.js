@@ -2,7 +2,8 @@
 const router = require('express').Router();
 const ctrl = require("../controllers");
 
-router.get('/dashboard', isLoggedIn, ctrl.dashboard.index);
+router.get('/', isLoggedIn, ctrl.dashboard.index);
+router.post('/', isLoggedIn, ctrl.dashboard.create);
 
 function isLoggedIn (req, res, next) {
     if (req.isAuthenticated()) return next();

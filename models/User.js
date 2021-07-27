@@ -12,8 +12,8 @@ const userSchema = new Schema(
         bio: String,
         techSkills: String,
         posts: [{ type: Schema.Types.ObjectId, ref: "Post" }],
-        comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
-        repos: [{ type: Schema.Types.ObjectId, ref: "Repo"}] 
+        // comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
+        // repos: [{ type: Schema.Types.ObjectId, ref: "Repo"}] 
     }
 );
 

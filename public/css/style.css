@@ -18,13 +18,13 @@
     letter-spacing: 4px;
 }
 #main-container {
-    /* border: 1px solid red; */
+    border: 1px solid blue;
     display: flex;
     justify-content: space-around;
     height: 80vh;
 }
 #center {
-    width: 45%;
+    width: 46%;
     min-width: fit-content;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
 }
 #left-pane-title {
     
-    /* border: 1px solid white;  */
+    border: 1px solid white; 
     margin-right: auto;
 }
 #page-title {
@@ -71,6 +71,7 @@
     color: #ff2a6d;
     border: none;
     letter-spacing: 2px;
+    margin-bottom: 46px;
 }
 #post-button:hover {
     cursor: pointer;
@@ -83,7 +84,7 @@
     flex-direction: column;
 }
 #profile-title {
-    /* border: 1px solid white; */
+    border: 1px solid white;
     padding: 12px 24px;
     color: #05d9e8;
     font-size: 28px;
@@ -91,13 +92,15 @@
     margin-bottom: 24px;
 }
 #profile-avatar-container {
-    /* border: 1px solid white; */
+    border: 1px solid white;
     margin: 12px auto 32px auto;
 }
 #profile-edit {
+    border: 1px solid purple;
     display: flex;
     flex-direction: column;
     margin-top: 36px;
+    min-height: fit-content;
 }
 #profile-edit-button {
     background-color: transparent;
@@ -109,6 +112,10 @@
 }
 #profile-edit-button:hover {
     cursor: pointer;
+}
+#active-post-title {
+    color: #005678;
+    margin-bottom: 12px;
 }
 .profile-cat {
     color: #05d9e8;
@@ -126,7 +133,7 @@
     margin: 10px 12px;
 }
 .main-divider {
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     width: 28%;
 }
 .hr {
@@ -147,6 +154,29 @@
     font-size: 12px;
     letter-spacing: 2px;
 }
+.post-box {
+    border: 1px solid #005678;
+    width: 512px;
+    margin-bottom: 12px;
+}
+.post-box-header{
+    color: #05d9e8;
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 12px 12px 12px;
+}
+.post-box-content {
+    color: white;
+    margin: 4px 12px;
+}
+.post-box-footer {
+    color: #ff2a6d;
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 12px 4px 12px;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
 a {
     color: #d1f7ff;
     text-decoration: none;
@@ -163,3 +193,7 @@ footer {
     margin-top: auto;
     padding: 25px 10px;
 }
+::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }

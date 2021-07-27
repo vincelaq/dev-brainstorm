@@ -3,10 +3,10 @@ const router = require('express').Router();
 const passport = require('passport');
 
 // LOGIN ROUTE
-router.get('/auth/github', passport.authenticate('github'));
+router.get('/github', passport.authenticate('github'));
 
 // CALLBACK ROUTE
-router.get('/auth/github/callback', 
+router.get('/github/callback', 
   passport.authenticate('github', { 
         successRedirect: '/dashboard',
         failureRedirect: '/index',

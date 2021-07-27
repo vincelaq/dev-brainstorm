@@ -15,13 +15,60 @@
     </section>
     <section id="center" class="main-divider">
         <div id="enter-post-container">
-            <form id="post-form">
-                <input id="post-title" class="post-text" type="text" value="TITLE">
-                <input id="post-pitch" class="post-text" type="text" value="PITCH">
+            <form id="post-form" action="/dashboard" method="POST">
+                <input id="post-title" class="post-text" type="text" placeholder="TITLE" name="title">
+                <input id="post-pitch" class="post-text" type="text" placeholder="PITCH" name="content">
                 <div class="hr"></div>
                 <input id="post-button" type="submit" value="POST">
             </form>
         </div>
+        <div id="active-post-title">
+            YOUR ACTIVE POSTS
+        </div>
+        <div id="sample-post" class="post-box">
+            <div class="post-box-header">
+                <div class="post-box-title">
+                    // NEW FOOD APP IDEA
+                </div>
+                <div class="post-box-date">
+                    6-7-2021
+                </div>
+            </div>
+            <div class="post-box-content">
+                I have this idea for a dope food app! It tracks all the food spots you’ve eaten in the past and logs a personal rating! Anyone have experience in anything like this?
+            </div>
+            <div class="post-box-footer">
+                <div class="post-box-comments">
+                    25 COMMENTS
+                </div>
+                <div class="post-box-upvote">
+                    1783 UPVOTES
+                </div>
+            </div>
+        </div>
+    <% post.forEach(function(post) { %>
+        <div class="post-box">
+            <div class="post-box-header">
+                <div class="post-box-title">
+                    // <%= post.title %>
+                </div>
+                <div class="post-box-date">
+                    <%= post.date %>
+                </div>
+            </div>
+            <div class="post-box-content">
+                <%= post.content %>
+            </div>
+            <div class="post-box-footer">
+                <div class="post-box-comments">
+                    25 COMMENTS
+                </div>
+                <div class="post-box-upvote">
+                    1783 UPVOTES
+                </div>
+            </div>
+        </div>
+    <% }) %>
     </section>
     <section id="right" class="main-divider">
         <div id="profile-container">
