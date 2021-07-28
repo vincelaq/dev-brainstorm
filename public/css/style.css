@@ -38,7 +38,7 @@
 #page-title {
     color: #05d9e8;
     font-size: 56px;
-    letter-spacing: 8px;
+    letter-spacing: 6px;
     writing-mode: vertical-rl;
 }
 #page-desc {
@@ -56,7 +56,7 @@
 }
 #right {
     min-width: 400px;
-    min-height: 600px;
+    min-height: 500px;
 }
 #post-form {
     display: flex;
@@ -112,6 +112,12 @@
 #profile-edit-button:hover {
     cursor: pointer;
 }
+#title-username {
+    color: #d1f7ff;
+}
+#profile-toggle:hover {
+    cursor: pointer;
+}
 .active-title {
     color: #d1f7ff;
     margin-bottom: 12px;
@@ -130,6 +136,7 @@
 }
 .nav-link {
     margin: 10px 12px;
+    color: #d1f7ff;
 }
 .main-divider {
     /* border: 1px solid yellow; */
@@ -137,7 +144,7 @@
 }
 .hr {
     border: 1px solid #ff2a6d;
-    width: 512px;
+    width: 600px;
 }
 .hr-profile {
     border: 1px solid #005678;
@@ -155,7 +162,7 @@
 }
 .post-box {
     border: 1px solid #005678;
-    width: 512px;
+    width: 600px;
     margin-bottom: 12px;
 }
 .post-box-header{
@@ -209,7 +216,6 @@
     font-size: 12px;
 }
 a {
-    color: #d1f7ff;
     text-decoration: none;
 }
 body {
@@ -226,5 +232,5 @@ footer {
 }
 ::placeholder {
     color: white;
-    opacity: 1; /* Firefox */
+    opacity: .6; /* Firefox */
   }

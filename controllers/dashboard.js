@@ -9,6 +9,7 @@ module.exports = {
 
 function create (req, res) {
     req.body.user = req.user.id;
+    req.body.username = req.user.username;
     const date = new Date();
     req.body.date = `${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}`;
     const post = new Post(req.body);
