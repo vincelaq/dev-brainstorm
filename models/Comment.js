@@ -5,8 +5,10 @@ const Schema = mongoose.Schema;
 const commentSchema = new Schema(
     {
         content: { type: String, required: true },
-        date: { type: Date, default: Date.now },
-        user: { type: Schema.Types.ObjectId, ref:"User" },
+        date: { type: String, required: true },
+        user: { type: Schema.Types.ObjectId, ref: "User" },
+        username: String,
+        post: { type: Schema.Types.ObjectId, ref: "Post" },
         // upVotes: [{ type: Schema.Types.ObjectId, ref: "Upvote" }], 
     },
     {

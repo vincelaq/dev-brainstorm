@@ -18,7 +18,7 @@
     letter-spacing: 4px;
 }
 #main-container {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     justify-content: space-around;
     height: 80vh;
@@ -32,8 +32,7 @@
 
 }
 #left-pane-title {
-    
-    border: 1px solid white; 
+    /* border: 1px solid white;  */
     margin-right: auto;
 }
 #page-title {
@@ -84,7 +83,7 @@
     flex-direction: column;
 }
 #profile-title {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     padding: 12px 24px;
     color: #05d9e8;
     font-size: 28px;
@@ -92,11 +91,11 @@
     margin-bottom: 24px;
 }
 #profile-avatar-container {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     margin: 12px auto 32px auto;
 }
 #profile-edit {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     display: flex;
     flex-direction: column;
     margin-top: 36px;
@@ -113,8 +112,8 @@
 #profile-edit-button:hover {
     cursor: pointer;
 }
-#active-post-title {
-    color: #005678;
+.active-title {
+    color: #d1f7ff;
     margin-bottom: 12px;
 }
 .profile-cat {
@@ -133,7 +132,7 @@
     margin: 10px 12px;
 }
 .main-divider {
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     width: 28%;
 }
 .hr {
@@ -170,6 +169,38 @@
     margin: 4px 12px;
 }
 .post-box-footer {
+    color: #ff2a6d;
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 12px 4px 12px;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+.comment-text {
+    width: 500px;
+    height: 26px;
+    background-color: transparent; 
+    border: none;
+    color: #d1f7ff;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.comment-box {
+    border: 1px solid #005678;
+    width: 512px;
+    margin-bottom: 12px;
+}
+.comment-box-header{
+    color: #05d9e8;
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 12px 12px 12px;
+}
+.comment-box-content {
+    color: white;
+    margin: 4px 12px;
+}
+.comment-box-footer {
     color: #ff2a6d;
     display: flex;
     justify-content: space-between;
