@@ -46,26 +46,26 @@
             </div>
         </div>
         <div class="active-title">
-            COMMENTS
+            DISCUSSION
         </div>
     <% currentPost.comments.forEach(function(comment) { %>
-        <div class="post-box">
-            <div class="post-box-header">
-                <div class="post-box-title">
-                    // <%= comment.user.username %>
+        <div class="comment-box">
+            <div class="comment-box-header">
+                <div class="comment-box-title">
+                    // <%= comment.username %>
                 </div>
-                <div class="post-box-date">
+                <div class="comment-box-date">
                     <%= comment.date %>
                 </div>
             </div>
-            <div class="post-box-content">
+            <div class="comment-box-content">
                 <%= comment.content %>
             </div>
-            <div class="post-box-footer">
-                <div class="post-box-comments">
-                    25 COMMENTS
+            <div class="comment-box-footer">
+                <div class="comment-box-comments">
+                    DELETE COMMENT
                 </div>
-                <div class="post-box-upvote">
+                <div class="comment-box-upvote">
                     1783 UPVOTES
                 </div>
             </div>

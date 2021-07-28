@@ -10,6 +10,7 @@ module.exports = {
 
 function create (req, res) {
     req.body.user = req.user.id;
+    req.body.username = req.user.username;
     const date = new Date();
     req.body.date = `${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}`;
     req.body.post = req.params.id;
@@ -25,15 +26,10 @@ function create (req, res) {
     });
     Post.findOneAndUpdate({'_id': req.params.id}, { 
         $push: { comments: comment.id  }
-    }, function (err, post) {
-        let currentPost = post;
+    }, function (err) {
         if (err) res.send(err);
-        res.render(`posts/index`, {
-            user: req.user,
-            currentPost, 
-        });
     });
-    
+    res.redirect(`${req.params.id}`);
 };
 
 function index (req, res) {
