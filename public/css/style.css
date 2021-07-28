@@ -68,6 +68,9 @@
     border: none;
     letter-spacing: 2px;
 }
+#right {
+    color: #d1f7ff;
+}
 .nav-link {
     margin: 10px 12px;
 }
@@ -78,6 +81,12 @@
 .hr {
     border: 1px solid #ff2a6d;
     width: 512px;
+}
+.line-seperation {
+    border: 1px solid #ff2a6d;
+    width: 256px;
+    align-content: center;
+
 }
 .post-text {
     width: 500px;
