@@ -113,7 +113,7 @@
 #profile-edit-button:hover {
     cursor: pointer;
 }
-#active-post-title {
+.active-title {
     color: #005678;
     margin-bottom: 12px;
 }

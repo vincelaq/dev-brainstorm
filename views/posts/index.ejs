@@ -3,39 +3,63 @@
     <section id="left" class="main-divider">
         <div id="left-pane-title">
             <div id="page-desc">
-                // the dashboard is a place where you can see <br>
-                // your posts and post new ideas for people to comment on.<br>
+                // this post view is a place where you can see <br>
+                // your selected post, comments, and upvotes.<br>
                 // It also has a snapshot of your profile.<br>
             </div><br>
             <div id="page-title">
-                DASHBOARD
+                SELECTED POST
             </div>
-            
         </div>
     </section>
     <section id="center" class="main-divider">
         <div id="enter-post-container">
-            <form id="post-form" action="/dashboard" method="POST">
-                <input id="post-title" class="post-text" type="text" placeholder="TITLE" name="title">
-                <input id="post-pitch" class="post-text" type="text" placeholder="PITCH" name="content">
+            <form id="post-form" action="/posts/<%=currentPost._id%>" method="POST">
+                <input id="post-comment" class="post-text" type="text" placeholder="TEXT" name="content">
                 <div class="hr"></div>
-                <input id="post-button" type="submit" value="POST">
+                <input id="post-button" type="submit" value="COMMENT">
             </form>
         </div>
         <div class="active-title">
-            YOUR ACTIVE POSTS
+            YOUR SELECTED POST
         </div>
         <div id="sample-post" class="post-box">
             <div class="post-box-header">
                 <div class="post-box-title">
-                    // NEW FOOD APP IDEA
+                    // <%=currentPost.title%>
                 </div>
                 <div class="post-box-date">
-                    6-7-2021
+                    <%=currentPost.date%>
                 </div>
             </div>
             <div class="post-box-content">
-                I have this idea for a dope food app! It tracks all the food spots you’ve eaten in the past and logs a personal rating! Anyone have experience in anything like this?
+                <%=currentPost.content%>
+            </div>
+            <div class="post-box-footer">
+                <div class="post-box-comments">
+                    <%=currentPost.comments.length%>
+                    COMMENTS
+                </div>
+                <div class="post-box-upvote">
+                    1783 UPVOTES
+                </div>
+            </div>
+        </div>
+        <div class="active-title">
+            COMMENTS
+        </div>
+    <% currentPost.comments.forEach(function(comment) { %>
+        <div class="post-box">
+            <div class="post-box-header">
+                <div class="post-box-title">
+                    // <%= comment.user.username %>
+                </div>
+                <div class="post-box-date">
+                    <%= comment.date %>
+                </div>
+            </div>
+            <div class="post-box-content">
+                <%= comment.content %>
             </div>
             <div class="post-box-footer">
                 <div class="post-box-comments">
@@ -46,30 +70,6 @@
                 </div>
             </div>
         </div>
-    <% post.forEach(function(post) { %>
-        <a href="/posts/<%=post._id%>">    
-            <div class="post-box">
-                <div class="post-box-header">
-                    <div class="post-box-title">
-                        // <%= post.title %>
-                    </div>
-                    <div class="post-box-date">
-                        <%= post.date %>
-                    </div>
-                </div>
-                <div class="post-box-content">
-                    <%= post.content %>
-                </div>
-                <div class="post-box-footer">
-                    <div class="post-box-comments">
-                        25 COMMENTS
-                    </div>
-                    <div class="post-box-upvote">
-                        1783 UPVOTES
-                    </div>
-                </div>
-            </div>
-        </a>    
     <% }) %>
     </section>
     <section id="right" class="main-divider">
