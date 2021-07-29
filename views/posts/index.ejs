@@ -36,9 +36,15 @@
                 <%=currentPost.content%>
             </div>
             <div class="post-box-footer">
+                <% if (user.username === currentPost.username) { %>
                 <form method="POST" action="/posts/<%=currentPost._id%>/?_method=DELETE">
                     <button class="post-box-delete" type="submit">DELETE POST</button>
                 </form>
+                <% } else { %>
+                <div class="comment-box-no-access">
+                    DELETE COMMENT
+                </div>
+                <% } %>
                 <div class="post-box-upvote">
                     1783 UPVOTES
                 </div>
@@ -61,11 +67,17 @@
                 <%= comment.content %>
             </div>
             <div class="comment-box-footer">
-                <div class="comment-box-comments">
-                    <form method="POST" action="/posts/<%=currentPost._id%>/<%=comment._id%>/?_method=DELETE">
-                        <button class="post-box-delete" type="submit">DELETE COMMENTS</button>
-                    </form>
-                </div>
+                <% if (user.username === comment.username) { %>
+                    <div class="comment-box-comments">
+                        <form method="POST" action="/posts/<%=currentPost._id%>/<%=comment._id%>/?_method=DELETE">
+                            <button class="post-box-delete" type="submit">DELETE COMMENT</button>
+                        </form>
+                    </div>
+                <% } else { %>
+                    <div class="comment-box-no-access">
+                        DELETE COMMENT
+                    </div>
+                <% } %>    
                 <div class="comment-box-upvote">
                     1783 UPVOTES
                 </div>
