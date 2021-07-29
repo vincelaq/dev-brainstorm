@@ -70,7 +70,8 @@
     color: #ff2a6d;
     border: none;
     letter-spacing: 2px;
-    margin-bottom: 46px;
+    margin-bottom: 16px;
+    font-size: 16px;
 }
 #post-button:hover {
     cursor: pointer;
@@ -79,7 +80,7 @@
     border: 1px solid #ff2a6d;
     height:100%;
     margin-right: 24px;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 #profile-title {
@@ -118,8 +119,13 @@
 #profile-toggle:hover {
     cursor: pointer;
 }
+#enter-post-container {
+    border: 1px solid #d1f7ff;
+    width: 600px;
+}
 .active-title {
     color: #d1f7ff;
+    margin-top: 24px;
     margin-bottom: 12px;
 }
 .profile-cat {
@@ -175,6 +181,17 @@
     color: white;
     margin: 4px 12px;
 }
+.post-box-delete {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    color: #ff2a6d;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
 .post-box-footer {
     color: #ff2a6d;
     display: flex;
@@ -214,6 +231,9 @@
     margin: 12px 12px 4px 12px;
     letter-spacing: 4px;
     font-size: 12px;
+}
+.comment-box-no-access {
+    opacity: 40%;
 }
 a {
     text-decoration: none;
