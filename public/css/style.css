@@ -144,6 +144,10 @@
     margin: 10px 12px;
     color: #d1f7ff;
 }
+.nav-link:hover {
+    text-decoration: underline;
+    color: #ff2a6d;
+}
 .main-divider {
     /* border: 1px solid yellow; */
     width: 28%;
