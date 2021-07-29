@@ -175,6 +175,17 @@
     color: white;
     margin: 4px 12px;
 }
+.post-box-delete {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    color: #ff2a6d;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
 .post-box-footer {
     color: #ff2a6d;
     display: flex;

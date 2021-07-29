@@ -36,10 +36,9 @@
                 <%=currentPost.content%>
             </div>
             <div class="post-box-footer">
-                <div class="post-box-comments">
-                    <%=currentPost.comments.length%>
-                    COMMENTS
-                </div>
+                <form method="POST" action="/posts/<%=currentPost._id%>/?_method=DELETE">
+                    <button class="post-box-delete" type="submit">DELETE POST</button>
+                </form>
                 <div class="post-box-upvote">
                     1783 UPVOTES
                 </div>
@@ -63,7 +62,9 @@
             </div>
             <div class="comment-box-footer">
                 <div class="comment-box-comments">
-                    DELETE COMMENT
+                    <form method="POST" action="/posts/<%=currentPost._id%>/<%=comment._id%>/?_method=DELETE">
+                        <button class="post-box-delete" type="submit">DELETE COMMENTS</button>
+                    </form>
                 </div>
                 <div class="comment-box-upvote">
                     1783 UPVOTES

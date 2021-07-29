@@ -6,7 +6,34 @@ const Comment = require('../models/Comment');
 module.exports = {
     index,
     create,
+    delete: deletePost,
+    deleteComment,
 }
+function deleteComment (req, res) {
+    Comment.findByIdAndDelete(req.params.idComment)
+    .then((err) => {
+        if (err) console.log(err);
+        res.redirect(`back`);
+    })
+};
+
+function deletePost (req, res) {
+   
+    Post.findByIdAndDelete(req.params.id)
+    .then((err) => {
+        if (err) console.log(err);
+    })
+    User.findOne({'username': req.user.username})
+    .populate('posts')
+    .exec((err, userPost) => {
+        let post = userPost.posts;
+        if (err) res.send(err);
+        res.render('dashboard/index', {
+            user: req.user,
+            post, 
+        });
+    })  
+};
 
 function create (req, res) {
     req.body.user = req.user.id;
@@ -37,7 +64,6 @@ function index (req, res) {
     .populate('comments')
     .exec((err, post) => {
         let currentPost = post;
-        console.log(post);
         if (err) res.send(err);
         res.render('posts/index', {
             user: req.user,
