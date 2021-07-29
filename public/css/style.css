@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 #avatar-icon {
     width: 200px;
     border-radius: 50%;
@@ -35,7 +36,17 @@
     /* border: 1px solid white;  */
     margin-right: auto;
 }
+#TL-page-layout {
+    display: flex;
+    flex-direction: column;
+}
 #page-title {
+    color: #05d9e8;
+    font-size: 56px;
+    letter-spacing: 6px;
+    writing-mode: vertical-rl;
+}
+#TL-title {
     color: #05d9e8;
     font-size: 56px;
     letter-spacing: 6px;
@@ -161,6 +172,11 @@
     width: 360px;
     margin: 5px auto;
 }
+.hr-timeline {
+    border: 1px solid #005678;
+    width: 700px;
+    margin: 5px auto;
+}
 .post-text {
     width: 500px;
     height: 26px;
@@ -173,6 +189,11 @@
 .post-box {
     border: 1px solid #005678;
     width: 600px;
+    margin-bottom: 12px;
+}
+.post-box2 {
+    border: 1px solid #005678;
+    width: 700px;
     margin-bottom: 12px;
 }
 .post-box-header{
@@ -236,12 +257,32 @@
     letter-spacing: 4px;
     font-size: 12px;
 }
+#tl-Title {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+#timeline-Container {
+    text-align: center;
+}
+#Community-Posts-TL {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;    
+    padding: 5px 10px 15px 20px;
+    margin: 25px auto;
+
 .comment-box-no-access {
     opacity: 40%;
 }
 a {
     text-decoration: none;
 }
+/*#community-posts {
+}
+*/
+
 body {
     background-color: #01012b;
     font-family: 'Quicksand', sans-serif;

@@ -1,47 +1,62 @@
 <%- include('../partials/header') %>
-    <div id="timeline-Container">
-        <div id=tl-Title>
-            TIMELINE
-        </div>
-        <br>
-        <div class="hr-profile"></div>
-        <div id="Community-Posts">
-            <% if (post.length > 0) { %>
-                <div class="active-title">
-                    TIMELINE
-                </div>
-            <% post.forEach(function(post) { %>
-                <a href="/posts/<%=post._id%>">    
-                    <div class="post-box">
-                        <div class="post-box-header">
-                            <div class="post-box-title">
-                                 <%= post.title %>  :  <span id="title-username"><%= post.username %></span>
-                            </div>
-                            <div class="post-box-date">
-                                <%= post.date %>
-                            </div>
-                        </div>
-                        <div class="post-box-content">
-                            <%= post.content %>
-                        </div>
-                        <div class="post-box-footer">
-                            <div class="post-box-comments">
-                                <%=post.comments.length%>
-                                 COMMENTS
-                            </div>
-                            <div class="post-box-upvote">
-                                1783 UPVOTES
-                            </div>
-                        </div>
-                    </div>
-                </a>    
-            <% }) %>
-        <%} else {%>
-            <div class="active-title">
-                NO POSTS YET
+<div id="TL-page-layout">
+    <section id="left" class="TL-divider">
+        <div id="left-pane-title">
+            <div id="page-desc">
+                // the dashboard is a place where you can see <br>
+                // your posts and post new ideas for people to comment on.<br>
+                // It also has a snapshot of your profile.<br>
+            </div><br>
+            <div id="TL-title">
+                TIMELINE
             </div>
-        <%};%>    
-            
         </div>
-    </div>
+    </section>    
+    <section>   
+        <div id="timeline-Container">
+            <div id=tl-Title>
+                <h1>TIMELINE</h1>
+            </div>
+            <br>
+            <div class="hr-timeline"></div>
+            <br>
+            <div id="Community-Posts-TL">
+                <% if (post.length > 0) { %>
+                    <div class="active-title">
+                    </div>
+                <% post.forEach(function(post) { %>
+                    <a id="community-posts" href="/posts/<%=post._id%>">    
+                        <div class="post-box2">
+                            <div class="post-box-header">
+                                <div class="post-box-title">
+                                    <%= post.title %>  :  <span id="title-username"><%= post.username %></span>
+                                </div>
+                                <div class="post-box-date">
+                                    <%= post.date %>
+                                </div>
+                            </div>
+                            <div class="post-box-content">
+                                <%= post.content %>
+                            </div>
+                            <div class="post-box-footer">
+                                <div class="post-box-comments">
+                                    <%=post.comments.length%>
+                                    COMMENTS
+                                </div>
+                                <div class="post-box-upvote">
+                                    1783 UPVOTES
+                                </div>
+                            </div>
+                        </div>
+                    </a>    
+                <% }) %>
+            <%} else {%>
+                <div class="active-title">
+                    NO POSTS YET
+                </div>
+            <%};%>    
+            </div>
+        </div>
+    </section>
+</div>      
 <%- include('../partials/footer') %>
