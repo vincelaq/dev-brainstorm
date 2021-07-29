@@ -1,14 +1,14 @@
 <%- include('../partials/header') %>
     <div id="timeline-Container">
         <div id=tl-Title>
-            TIMELINE
+            <h1>TIMELINE</h1>
         </div>
         <br>
-        <div class="hr-profile"></div>
-        <div id="Community-Posts">
+        <div class="hr-timeline"></div>
+        <br>
+        <div id="Community-Posts-TL">
             <% if (post.length > 0) { %>
                 <div class="active-title">
-                    TIMELINE
                 </div>
             <% post.forEach(function(post) { %>
                 <a href="/posts/<%=post._id%>">    
