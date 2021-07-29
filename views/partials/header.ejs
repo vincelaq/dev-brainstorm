@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='/css/style.css' />
-  <title>INSERT TITLE</title>
+  <script type="text/javascript" src="/js/script.js" defer></script>
+  <title>hackedIn</title>
 </head>
 <body>
   <nav id="nav-header">
     <div id="nav-logo">
-      <img id="logo" src="/images/logo.png">
+      <a href="/dashboard"><img id="logo" src="/images/logo.png"></a>
     </div>
     <div id="nav-menu">
-      <a class="nav-link" href="/">DASHBOARD</a>
-      <a class="nav-link" href="/">TIMELINE</a>
-      <a class="nav-link" href="/">PROFILE</a>
+      <a class="nav-link" href="/dashboard">DASHBOARD</a>
+      <a class="nav-link" href="/timeline">TIMELINE</a>
+      <span class="nav-link" id="profile-toggle">PROFILE</span>
       <a class="nav-link" href="/auth/logout">LOGOUT</a>
     </div>
   </nav>

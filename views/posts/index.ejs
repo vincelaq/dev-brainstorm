@@ -8,25 +8,25 @@
                 // It also has a snapshot of your profile.<br>
             </div><br>
             <div id="page-title">
-                SELECTED POST
+                SELECTED
             </div>
         </div>
     </section>
     <section id="center" class="main-divider">
         <div id="enter-post-container">
             <form id="post-form" action="/posts/<%=currentPost._id%>" method="POST">
-                <input id="post-comment" class="post-text" type="text" placeholder="TEXT" name="content">
+                <input id="post-comment" class="post-text" type="text" placeholder="TYPE COMMENT HERE" name="content">
                 <div class="hr"></div>
                 <input id="post-button" type="submit" value="COMMENT">
             </form>
         </div>
         <div class="active-title">
-            YOUR SELECTED POST
+            SELECTED POST
         </div>
         <div id="sample-post" class="post-box">
             <div class="post-box-header">
                 <div class="post-box-title">
-                    // <%=currentPost.title%>
+                    <%=currentPost.title%> : <span id="title-username"><%=currentPost.username%></span> 
                 </div>
                 <div class="post-box-date">
                     <%=currentPost.date%>
@@ -52,7 +52,7 @@
         <div class="comment-box">
             <div class="comment-box-header">
                 <div class="comment-box-title">
-                    // <%= comment.username %>
+                    RE : <%= comment.username %>
                 </div>
                 <div class="comment-box-date">
                     <%= comment.date %>
