@@ -3,6 +3,7 @@ require('dotenv').config();
 
 // EXTERNAL MODULES
 const express = require('express');
+const methodOverride = require('method-override');
 const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
@@ -25,6 +26,7 @@ if (port == null || port == "") {
 }
 
 // MIDDLEWARE
+app.use(methodOverride('_method'));
 app.use(logger('dev'));
 app.use(express.static('public'));
 app.use(express.json());

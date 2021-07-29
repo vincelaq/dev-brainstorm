@@ -4,6 +4,8 @@ const ctrl = require("../controllers");
 
 router.get('/:id', isLoggedIn, ctrl.posts.index);
 router.post('/:id', isLoggedIn, ctrl.posts.create);
+router.delete('/:id', isLoggedIn, ctrl.posts.delete);
+router.delete('/:idPost/:idComment', isLoggedIn, ctrl.posts.deleteComment);
 
 function isLoggedIn (req, res, next) {
     if (req.isAuthenticated()) return next();
