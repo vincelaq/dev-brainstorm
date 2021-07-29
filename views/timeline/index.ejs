@@ -6,6 +6,41 @@
         <br>
         <div class="hr-profile"></div>
         <div id="Community-Posts">
+            <% if (post.length > 0) { %>
+                <div class="active-title">
+                    TIMELINE
+                </div>
+            <% post.forEach(function(post) { %>
+                <a href="/posts/<%=post._id%>">    
+                    <div class="post-box">
+                        <div class="post-box-header">
+                            <div class="post-box-title">
+                                 <%= post.title %>  :  <span id="title-username"><%= post.username %></span>
+                            </div>
+                            <div class="post-box-date">
+                                <%= post.date %>
+                            </div>
+                        </div>
+                        <div class="post-box-content">
+                            <%= post.content %>
+                        </div>
+                        <div class="post-box-footer">
+                            <div class="post-box-comments">
+                                <%=post.comments.length%>
+                                 COMMENTS
+                            </div>
+                            <div class="post-box-upvote">
+                                1783 UPVOTES
+                            </div>
+                        </div>
+                    </div>
+                </a>    
+            <% }) %>
+        <%} else {%>
+            <div class="active-title">
+                NO POSTS YET
+            </div>
+        <%};%>    
             
         </div>
     </div>
