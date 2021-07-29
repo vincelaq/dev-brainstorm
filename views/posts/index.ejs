@@ -3,59 +3,74 @@
     <section id="left" class="main-divider">
         <div id="left-pane-title">
             <div id="page-desc">
-                // the dashboard is a place where you can see <br>
-                // your posts and post new ideas for people to comment on.<br>
+                // this post view is a place where you can see <br>
+                // your selected post, comments, and upvotes.<br>
                 // It also has a snapshot of your profile.<br>
             </div><br>
             <div id="page-title">
-                DASHBOARD
+                SELECTED
             </div>
         </div>
     </section>
     <section id="center" class="main-divider">
         <div id="enter-post-container">
-            <form id="post-form" action="/dashboard" method="POST">
-                <input id="post-title" class="post-text" type="text" placeholder="TYPE TITLE HERE" name="title">
-                <input id="post-pitch" class="post-text" type="text" placeholder="TYPE POST HERE" name="content">
+            <form id="post-form" action="/posts/<%=currentPost._id%>" method="POST">
+                <input id="post-comment" class="post-text" type="text" placeholder="TYPE COMMENT HERE" name="content">
                 <div class="hr"></div>
-                <input id="post-button" type="submit" value="POST">
+                <input id="post-button" type="submit" value="COMMENT">
             </form>
         </div>
-<% if (post.length > 0) { %>
         <div class="active-title">
-            YOUR POSTS
+            SELECTED POST
         </div>
-    <% post.forEach(function(post) { %>
-        <a href="/posts/<%=post._id%>">    
-            <div class="post-box">
-                <div class="post-box-header">
-                    <div class="post-box-title">
-                         <%= post.title %>  :  <span id="title-username"><%= post.username %></span>
-                    </div>
-                    <div class="post-box-date">
-                        <%= post.date %>
-                    </div>
+        <div id="sample-post" class="post-box">
+            <div class="post-box-header">
+                <div class="post-box-title">
+                    <%=currentPost.title%> : <span id="title-username"><%=currentPost.username%></span> 
                 </div>
-                <div class="post-box-content">
-                    <%= post.content %>
-                </div>
-                <div class="post-box-footer">
-                    <div class="post-box-comments">
-                        <%=post.comments.length%>
-                         COMMENTS
-                    </div>
-                    <div class="post-box-upvote">
-                        1783 UPVOTES
-                    </div>
+                <div class="post-box-date">
+                    <%=currentPost.date%>
                 </div>
             </div>
-        </a>    
+            <div class="post-box-content">
+                <%=currentPost.content%>
+            </div>
+            <div class="post-box-footer">
+                <div class="post-box-comments">
+                    <%=currentPost.comments.length%>
+                    COMMENTS
+                </div>
+                <div class="post-box-upvote">
+                    1783 UPVOTES
+                </div>
+            </div>
+        </div>
+        <div class="active-title">
+            DISCUSSION
+        </div>
+    <% currentPost.comments.forEach(function(comment) { %>
+        <div class="comment-box">
+            <div class="comment-box-header">
+                <div class="comment-box-title">
+                    RE : <%= comment.username %>
+                </div>
+                <div class="comment-box-date">
+                    <%= comment.date %>
+                </div>
+            </div>
+            <div class="comment-box-content">
+                <%= comment.content %>
+            </div>
+            <div class="comment-box-footer">
+                <div class="comment-box-comments">
+                    DELETE COMMENT
+                </div>
+                <div class="comment-box-upvote">
+                    1783 UPVOTES
+                </div>
+            </div>
+        </div>
     <% }) %>
-<%} else {%>
-    <div class="active-title">
-        NO POSTS YET
-    </div>
-<%};%>    
     </section>
     <section id="right" class="main-divider">
         <div id="profile-container">
@@ -128,6 +143,7 @@
                 <button id="profile-edit-button">EDIT</button>
             </div>
         </div>
+
     </section>
 </div>
 

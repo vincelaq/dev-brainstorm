@@ -44,6 +44,7 @@ app.get("/", (req, res) => { res.render("index") });
 app.use("/timeline", routes.timeline);
 app.use("/dashboard", routes.dashboard);
 app.use("/auth", routes.auth);
+app.use("/posts", routes.posts);
 
 // LISTENER
 app.listen(port, () => { 
