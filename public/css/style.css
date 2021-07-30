@@ -40,7 +40,7 @@
 }
 #TL-page-layout {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 #page-title {
     color: #05d9e8;
@@ -62,6 +62,10 @@
     writing-mode: vertical-rl;
     text-align: right;
     margin-left: 24px;
+}
+#right-TL {
+    position: relative; 
+    left: 250px;
 }
 #left {
     display: flex;
@@ -136,6 +140,9 @@
     border: 1px solid #d1f7ff;
     width: 600px;
 }
+.TL-divider {
+    width: 150;
+}  
 #enter-profile-container {
     border: 1px solid #d1f7ff;
     width: 600px;
