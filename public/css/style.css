@@ -200,6 +200,9 @@
     width: 600px;
     margin-bottom: 12px;
 }
+.post-box:hover {
+    border: 1px solid #ff2a6d;
+}
 .post-box2 {
     border: 1px solid #005678;
     width: 700px;
