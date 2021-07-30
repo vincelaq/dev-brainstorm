@@ -22,7 +22,7 @@
             font-family: 'Orbitron', sans-serif;
         }
         .homePage {
-            color: #0112f8;
+            color: white;
             display: inline-block;
             margin-top: 275px;
             margin-right: auto;
@@ -32,6 +32,23 @@
         strong {
             font-weight: bold;
         }
+        button>img {
+            width: 16px;
+        }
+        button {
+            background-color: lightslategrey;
+            color:whitesmoke;
+            font-size: 16px;
+            padding: 8px 12px;
+            margin: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #signup {
+            font-size: 12px;
+            color:palevioletred;
+        }
     </style>
 </head>
 <body>
@@ -39,9 +56,19 @@
         <div id=hackedIn>
             <h2>Welcome to <h1><img src="../images/logo.png" alt="HackedIn Logo"></h1></h2>
         </div>
+        <div>Your dev community brainstorming, social, and resource message board.</div>
         <div>
-            <h2>Login or <a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home" Signup with GitHub</p>
-            <a href="/auth/github">Signup </a>with GitHub</h2>
+            <h2>
+            <a href="/auth/github">
+                <button>
+                    Sign in with GitHub   <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">
+                </button>
+            </a>
+            <br>
+                <a id="signup" href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home">
+                    Don't have a GitHub Account?
+                </a>
+            </h2>
         </div>
     </div>
 
