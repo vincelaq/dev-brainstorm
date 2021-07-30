@@ -26,7 +26,7 @@
         <div id="sample-post" class="post-box">
             <div class="post-box-header">
                 <div class="post-box-title">
-                    <%=currentPost.title%> : <span id="title-username"><%=currentPost.username%></span> 
+                    <%=currentPost.title%> : <span id="title-username"><a id="link" href="/profiles/show/<%=currentPost.username%>"><%=currentPost.username%></a></span> 
                 </div>
                 <div class="post-box-date">
                     <%=currentPost.date%>
@@ -57,7 +57,7 @@
         <div class="comment-box">
             <div class="comment-box-header">
                 <div class="comment-box-title">
-                    RE : <%= comment.username %>
+                    RE : <a id="link" href="/profiles/show/<%= comment.username %>"><%= comment.username %></a>
                 </div>
                 <div class="comment-box-date">
                     <%= comment.date %>
@@ -153,7 +153,7 @@
             <br>
             <div id="profile-edit">
                 <div class="hr" style="width: 100%; margin-top: auto;"></div>
-                <button id="profile-edit-button">EDIT</button>
+                <a href="/profiles/<%=user._id%>"><button id="profile-edit-button">EDIT PROFILE</button></a>
             </div>
         </div>
 
