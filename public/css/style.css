@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-#avatar-icon {
-    width: 200px;
+.avatar-icon {
+    width: 174px;
     border-radius: 50%;
+    margin-bottom: 16px;
 }
 #logo {
     width: 224px;
