@@ -47,6 +47,7 @@ app.use("/timeline", routes.timeline);
 app.use("/dashboard", routes.dashboard);
 app.use("/auth", routes.auth);
 app.use("/posts", routes.posts);
+app.use("/profiles", routes.profiles);
 
 // LISTENER
 app.listen(port, () => { 

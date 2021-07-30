@@ -3,59 +3,30 @@
     <section id="left" class="main-divider">
         <div id="left-pane-title">
             <div id="page-desc">
-                // the dashboard is a place where you can see <br>
-                // your posts and post new ideas for people to comment on.<br>
-                // It also has a snapshot of your profile.<br>
+                // in this view you can edit your profile info <br>
+                // and upload a profile picture.<br>
+                // It also has a snapshot of your current profile.<br>
             </div><br>
             <div id="page-title">
-                DASHBOARD
+                EDIT PROFILE
             </div>
         </div>
     </section>
     <section id="center" class="main-divider">
-        <div id="enter-post-container">
-            <form id="post-form" action="/dashboard" method="POST">
-                <input id="post-title" class="post-text" type="text" placeholder="TYPE TITLE HERE" name="title">
-                <input id="post-pitch" class="post-text" type="text" placeholder="TYPE POST HERE" name="content">
+        <div id="profile-title" class="right-profile">// EDIT PROFILE</div>
+        <div id="enter-profile-container">
+            <form id="post-form" action="/profiles/<%=user._id%>" method="POST">
+                <label>NAME //</label><input class="post-text profile-box" type="text" value="<%=user.name%>" name="name"><br>
+                <label>USERNAME //</label><input class="post-text profile-box" type="text" value="<%=user.username%>" name="username"><br>
+                <label>EMAIL //</label><input class="post-text profile-box" type="text" value="<%=user.email%>" name="email"><br>
+                <label>TECH SKILLS //</label><input class="post-text profile-box" type="text" value="<%=user.techSkills%>" name="techSkills"><br>
+                <label>BIO //</label><input class="post-text profile-box" type="text" value="<%=user.bio%>" name="bio"><br>
+                <label>AVATAR URL//</label><input class="post-text profile-box" type="text" value="<%=user.avatar%>" name="avatar"><br>
                 <div class="hr"></div>
-                <input id="post-button" type="submit" value="POST">
+                <input id="post-button" type="submit" value="SAVE CHANGES">
             </form>
         </div>
-<% if (post.length > 0) { %>
         <div class="active-title">
-            YOUR POSTS
-        </div>
-    <% post.forEach(function(post) { %>
-        <a href="/posts/<%=post._id%>">    
-            <div class="post-box">
-                <div class="post-box-header">
-                    <div class="post-box-title">
-                         <%= post.title %>  :  <span id="title-username"><%= post.username %></span>
-                    </div>
-                    <div class="post-box-date">
-                        <%= post.date %>
-                    </div>
-                </div>
-                <div class="post-box-content">
-                    <%= post.content %>
-                </div>
-                <div class="post-box-footer">
-                    <div class="post-box-comments">
-                        <%=post.comments.length%>
-                         COMMENTS
-                    </div>
-                    <div class="post-box-upvote">
-                        1783 UPVOTES
-                    </div>
-                </div>
-            </div>
-        </a>    
-    <% }) %>
-<%} else {%>
-    <div class="active-title">
-        NO POSTS YET
-    </div>
-<%};%>    
     </section>
     <section id="right" class="main-divider">
         <div id="profile-container">
@@ -125,9 +96,10 @@
             <br>
             <div id="profile-edit">
                 <div class="hr" style="width: 100%; margin-top: auto;"></div>
-                <a href="/profiles/<%=user._id%>"><button id="profile-edit-button">EDIT PROFILE</button></a>
+                <button id="profile-edit-button">EDIT</button>
             </div>
         </div>
+
     </section>
 </div>
 

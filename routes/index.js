@@ -4,4 +4,5 @@ module.exports = {
     auth: require("./auth"),
     timeline: require("./timeline"),
     posts: require("./posts"),
+    profiles: require("./profiles"),
 };

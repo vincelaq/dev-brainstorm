@@ -134,6 +134,14 @@
     border: 1px solid #d1f7ff;
     width: 600px;
 }
+#enter-profile-container {
+    border: 1px solid #d1f7ff;
+    width: 600px;
+    padding: 12px;
+}
+.profile-box {
+    border: 1px solid #005678;
+}
 .active-title {
     color: #d1f7ff;
     margin-top: 24px;
@@ -294,6 +302,9 @@ footer {
     letter-spacing: 4px;
     margin-top: auto;
     padding: 25px 10px;
+}
+label {
+    color: #05d9e8;
 }
 ::placeholder {
     color: white;
