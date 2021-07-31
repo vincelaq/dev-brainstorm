@@ -8,7 +8,53 @@ module.exports = {
     create,
     delete: deletePost,
     deleteComment,
+    update,
+    updateComment,
 }
+function updateComment (req, res) {
+    Comment.findOne({ "_id": req.params.idComment})
+        .then((comment) => {
+            console.log(comment);
+            let upvoteArr = comment.upvotes;
+            if (upvoteArr.includes(req.user.username)) {
+                Comment.updateOne({ _id: req.params.idComment}, {
+                    $pull: { upvotes: req.user.username}
+                })
+                .then(() => console.log('decerement by -1'))
+                .catch((err) => console.log(err))
+            } else {
+                Comment.updateOne({ _id: req.params.idComment}, {
+                    $push: { upvotes: req.user.username}
+                })
+                .then(() => console.log('increment by 1'))
+                .catch((err) => console.log(err))
+            }
+            res.redirect('back');
+        })
+};
+
+function update (req, res) {
+    Post.findOne({ "_id": req.params.id})
+        .then((post) => {
+            console.log(post);
+            let upvoteArr = post.upvotes;
+            if (upvoteArr.includes(req.user.username)) {
+                Post.updateOne({ _id: req.params.id}, {
+                    $pull: { upvotes: req.user.username}
+                })
+                .then(() => console.log('decerement by -1'))
+                .catch((err) => console.log(err))
+            } else {
+                Post.updateOne({ _id: req.params.id}, {
+                    $push: { upvotes: req.user.username}
+                })
+                .then(() => console.log('increment by 1'))
+                .catch((err) => console.log(err))
+            }
+            res.redirect('back');
+        })
+};
+
 function deleteComment (req, res) {
     Comment.findByIdAndDelete(req.params.idComment)
     .then((err) => {

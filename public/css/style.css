@@ -236,7 +236,10 @@
     letter-spacing: 4px;
     font-size: 12px;
 }
-
+.post-box-delete:hover {
+    color:#05d9e8;
+    text-shadow: 0px 0px 5px #05d9e8;
+}
 .post-box-footer {
     color: #ff2a6d;
     display: flex;
