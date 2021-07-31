@@ -1,18 +1,30 @@
-# dev-brainstorm
-Vince & Chris
+# HackedIN
 
-### Titles  and internal  titles
+## Concept: 
+Explain the concept of the application or game. Include instructions and how to win/lose.
 
-### Introduction- the project's aim
+## Wireframes:
 
-### Technologies
+## Technologies Used:
+    - HTML
+    - CSS 
+    - FontAwesome 
+    - JavaScript
 
-### Launch
+## Approach: 
+Explain your approach to develop the app/game
 
-#### Table of contents
+## Challenges: 
+List any challenges and how you overcame them
+Indicate any outstanding problems
 
-#### Illistrations
+## Additional information:
+### Future Updates
+- Option to order posts by most comments, most upvotes, or most recent
+- Add following/followers or friends functionality
+- Add more github integration such as:
+  - Add ability to create a new github repo with collaborators
+- Add an entire private hackedin jornal entry system for private project ideas
 
-#### Scope of functionalities
-
-#### Project status
+## App Demo 
+[Link to GitHub project on Heroku)](https://agile-meadow-31332.herokuapp.com/)
