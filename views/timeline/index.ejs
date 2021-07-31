@@ -3,19 +3,18 @@
     <section id="left-TL" class="TL-divider">
         <div id="left-pane-title">
             <div id="page-desc">
-                // the dashboard is a place where you can see <br>
-                // your posts and post new ideas for people to comment on.<br>
-                // It also has a snapshot of your profile.<br>
+                // users can see other users ideas.<br>
+                // users can comment and upvote here<br>
             </div><br>
             <div id="TL-title">
-                TIMELINE
+                COMUNNITY HUB
             </div>
         </div>
     </section>    
     <section id="right-TL" class="TL-divider">   
         <div id="timeline-Container">
             <div id=tl-Title>
-                <h1>TIMELINE</h1>
+                <h1>COMUNNITY HUB</h1>
             </div>
             <br>
             <div class="hr-timeline"></div>
@@ -44,7 +43,8 @@
                                     COMMENTS
                                 </div>
                                 <div class="post-box-upvote">
-                                    1783 UPVOTES
+                                    <%=post.upvotes.length%>
+                                    UPVOTESc
                                 </div>
                             </div>
                         </div>
