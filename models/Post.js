@@ -10,7 +10,7 @@ const postSchema = new Schema(
         user: { type: Schema.Types.ObjectId, ref:"User" },
         username: String,
         comments: [{ type: Schema.Types.ObjectId, ref:"Comment" }],
-        // upVotes: [{ type: Schema.Types.ObjectId, ref: "Upvote" }], 
+        upvotes: [ String ], 
     },
     {
         timestamps: true,

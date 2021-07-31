@@ -8,7 +8,31 @@ module.exports = {
     create,
     delete: deletePost,
     deleteComment,
+    update,
 }
+
+function update (req, res) {
+    Post.findOne({ "_id": req.params.id})
+        .then((post) => {
+            console.log(post);
+            let upvoteArr = post.upvotes;
+            if (upvoteArr.includes(req.user.username)) {
+                Post.updateOne({ _id: req.params.id}, {
+                    $pull: { upvotes: req.user.username}
+                })
+                .then(() => console.log('decerement by -1'))
+                .catch((err) => console.log(err))
+            } else {
+                Post.updateOne({ _id: req.params.id}, {
+                    $push: { upvotes: req.user.username}
+                })
+                .then(() => console.log('increment by 1'))
+                .catch((err) => console.log(err))
+            }
+            res.redirect('back');
+        })
+};
+
 function deleteComment (req, res) {
     Comment.findByIdAndDelete(req.params.idComment)
     .then((err) => {
