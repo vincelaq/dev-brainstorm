@@ -13,20 +13,13 @@
         </div>
     </section>
     <section id="center" class="main-divider">
-        <div id="enter-post-container">
-            <form id="post-form" action="/posts/<%=currentPost._id%>" method="POST">
-                <input id="post-comment" class="post-text" type="text" placeholder="TYPE COMMENT HERE" name="content">
-                <div class="hr"></div>
-                <input id="post-button" type="submit" value="COMMENT">
-            </form>
-        </div>
-        <div class="active-title">
-            SELECTED POST
+        <div id=tl-Title>
+            <h1>SELECTED POST</h1>
         </div>
         <div id="sample-post" class="post-box">
             <div class="post-box-header">
                 <div class="post-box-title">
-                    <%=currentPost.title%> : <span id="title-username"><a id="link" href="/profiles/show/<%=currentPost.username%>"><%=currentPost.username%></a></span> 
+                    <%=currentPost.title%> : <span id="title-username"><a class="link" href="/profiles/show/<%=currentPost.username%>"><%=currentPost.username%></a></span> 
                 </div>
                 <div class="post-box-date">
                     <%=currentPost.date%>
@@ -51,8 +44,16 @@
             </div>
         </div>
         <div class="active-title">
-            DISCUSSION
+            COMMENTS
         </div>
+        <div id="enter-post-container">
+            <form id="post-form" action="/posts/<%=currentPost._id%>" method="POST">
+                <input id="post-comment" class="post-text" type="text" placeholder="TYPE COMMENT HERE" name="content">
+                <div class="hr"></div>
+                <input id="post-button" type="submit" value="COMMENT">
+            </form>
+        </div>
+        <br><br>
     <% currentPost.comments.forEach(function(comment) { %>
         <div class="comment-box">
             <div class="comment-box-header">
