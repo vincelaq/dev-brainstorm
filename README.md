@@ -39,10 +39,10 @@ AAU: I want to be able to connect with other users<br>
 ## Approach: 
 1. Brainstorming project ideas
    1. Reviewed MVP and determine Phases 1-3
-2. Created ERD & User Flow diagram for organization of ideas
-3. Determine Effort vs User Value
+2. Determine Effort vs User Value
    1. Practice Oauth to see if project was feasible
    2. Practice Heroku to see if project was feasible
+3. Created ERD & User Flow diagram for organization of ideas
 4. Brainstormed HTML Layout, CSS, Styling, Color Palettes
 5. Started scheduling tasks using Trello
 6. Created GitHub Project Repository
