@@ -78,9 +78,9 @@
                         DELETE COMMENT
                     </div>
                 <% } %>    
-                <div class="comment-box-upvote">
-                    1783 UPVOTES
-                </div>
+                <form method="POST" action="/posts/upvote/<%=currentPost._id%>/<%=comment._id%>">
+                    <button class="post-box-delete" type="submit"><%=comment.upvotes.length%> UPVOTES</button>
+                </form>
             </div>
         </div>
     <% }) %>
