@@ -13,6 +13,7 @@ function index (req, res) {
         if (err) res.send(err);
         res.render('timeline/index', {
             post,
+            user: req.user,
         });
     })
 };

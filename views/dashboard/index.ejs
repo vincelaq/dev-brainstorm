@@ -13,9 +13,10 @@
         </div>
     </section>
     <section id="center" class="main-divider">
-        <div class="active-title">
-            POST YOUR NEXT APP IDEA HERE
+        <div id=tl-Title>
+            <h1>POST YOUR NEXT APP IDEA HERE</h1>
         </div>
+        <br>
         <div id="enter-post-container">
             <form id="post-form" action="/dashboard" method="POST">
                 <input id="post-title" class="post-text" type="text" placeholder="TYPE TITLE HERE" name="title">
@@ -26,6 +27,7 @@
         </div>
 <% if (post.length > 0) { %>
         <div class="active-title">
+            <br><br>
             YOUR ACTIVE POSTS
         </div>
     <% post.forEach(function(post) { %>
