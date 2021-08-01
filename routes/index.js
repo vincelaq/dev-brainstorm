@@ -5,4 +5,5 @@ module.exports = {
     timeline: require("./timeline"),
     posts: require("./posts"),
     profiles: require("./profiles"),
+    notepad: require("./notepad"),
 };

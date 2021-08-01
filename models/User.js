@@ -13,6 +13,7 @@ const userSchema = new Schema(
         techSkills: String,
         posts: [{ type: Schema.Types.ObjectId, ref: "Post" }],
         comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
+        notepad: [{ type: Schema.Types.ObjectId, ref: "Notepad" }],
         // repos: [{ type: Schema.Types.ObjectId, ref: "Repo"}] 
     }
 );

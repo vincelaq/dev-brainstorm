@@ -3,32 +3,65 @@
     <section id="left" class="main-divider">
         <div id="left-pane-title">
             <div id="page-desc">
-                // in this view you can edit your profile info <br>
-                // and upload a profile picture.<br>
-                // It also has a snapshot of your current profile.<br>
+                // this is where you can create <br>
+                // private entries for new ideas<br>
             </div><br>
             <div id="page-title">
-                EDIT PROFILE
+                NOTEPAD
             </div>
         </div>
     </section>
     <section id="center" class="main-divider">
         <div id=tl-Title>
-            <h1>EDIT PROFILE</h1>
+            <h1>CREATE PRIVATE POSTING</h1>
         </div>
-        <div id="enter-profile-container">
-            <form id="post-form" action="/profiles/<%=user._id%>" method="POST">
-                <label>NAME //</label><input class="post-text profile-box" type="text" value="<%=user.name%>" name="name"><br>
-                <label>USERNAME //</label><input class="post-text profile-box" type="text" value="<%=user.username%>" name="username"><br>
-                <label>EMAIL //</label><input class="post-text profile-box" type="text" value="<%=user.email%>" name="email"><br>
-                <label>TECH SKILLS //</label><input class="post-text profile-box" type="text" value="<%=user.techSkills%>" name="techSkills"><br>
-                <label>BIO //</label><input class="post-text profile-box" type="text" value="<%=user.bio%>" name="bio"><br>
-                <label>AVATAR URL//</label><input class="post-text profile-box" type="text" value="<%=user.avatar%>" name="avatar"><br>
-                <div class="hr3"></div>
-                <input id="post-button" type="submit" value="SAVE CHANGES">
+        <br>
+        <div id="enter-post-container">
+            <form id="post-form" action="/notepad" method="POST">
+                <input id="post-title" class="post-text" type="text" placeholder="TYPE TITLE HERE" name="title">
+                <input id="post-pitch" class="post-text" type="text" placeholder="TYPE ENTRY HERE" name="content">
+                <div class="hr"></div>
+                <input id="post-button" type="submit" value="POST">
             </form>
         </div>
+<% if (note.length > 0) { %>
         <div class="active-title">
+            <br><br>
+            YOUR CURRENT ENTRIES
+        </div>
+    <% note.forEach(function(note) { %>   
+            <div class="post-box">
+                <form method="POST" action="/notepad/<%=note._id%>">
+                <div class="post-box-header">
+                    <div class="post-box-title">
+                        <input class="notepad-title" type="text" value="<%= note.title %>" name="title" contenteditable="true">
+                    </div>
+                    <div class="post-box-date">
+                        <%= note.date %>
+                    </div>
+                </div>
+                <div class="post-box-content">
+                    <textarea class="notepad-content" name="content"><%= note.content %></textarea>
+                </div>
+                <div class="post-box-footer">
+                    <div class="post-box-comments">
+                            <button class="post-box-delete" type="submit">SAVE ENTRY</button>
+                        
+                    </div>
+                </form>
+                    <div class="post-box-upvote">
+                        <form method="POST" action="/notepad/<%=note._id%>/?_method=DELETE">
+                            <button class="post-box-delete" type="submit">DELETE ENTRY</button>
+                        </form>
+                    </div>
+                </div>
+            </div>   
+    <% }) %>
+<%} else {%>
+    <div class="active-title">
+        NO ENTRIES YET
+    </div>
+<%};%>    
     </section>
     <section id="right" class="main-divider">
         <div id="profile-container">
@@ -101,7 +134,6 @@
                 <a href="/profiles/<%=user._id%>"><button id="profile-edit-button">EDIT PROFILE</button></a>
             </div>
         </div>
-
     </section>
 </div>
 

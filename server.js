@@ -48,6 +48,7 @@ app.use("/dashboard", routes.dashboard);
 app.use("/auth", routes.auth);
 app.use("/posts", routes.posts);
 app.use("/profiles", routes.profiles);
+app.use("/notepad", routes.notepad);
 
 // LISTENER
 app.listen(port, () => { 
