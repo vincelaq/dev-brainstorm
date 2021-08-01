@@ -6,7 +6,21 @@ module.exports = {
     create,
     delete: deleteEntry,
     update,
+    sortOld,
 }
+
+function sortOld (req, res) {
+    User.findOne({'username': req.user.username})
+    .populate({path:'notepad',options:{ sort:{createdAt : 1}}})
+    .exec((err, userNote) => {
+        let note = userNote.notepad;
+        if (err) res.send(err);
+        res.render('notepad/index', {
+            user: req.user,
+            note, 
+        });
+    })  
+};
 
 function update (req, res) {
     Notepad.findByIdAndUpdate(req.params.id, {
@@ -46,7 +60,7 @@ function create (req, res) {
 
 function index (req, res) {
     User.findOne({'username': req.user.username})
-    .populate('notepad')
+    .populate({path:'notepad',options:{ sort:{createdAt : -1}}})
     .exec((err, userNote) => {
         let note = userNote.notepad;
         if (err) res.send(err);

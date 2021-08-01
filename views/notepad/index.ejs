@@ -13,7 +13,7 @@
     </section>
     <section id="center" class="main-divider">
         <div id=tl-Title>
-            <h1>CREATE PRIVATE POSTING</h1>
+            <h1>CREATE PRIVATE ENTRY</h1>
         </div>
         <br>
         <div id="enter-post-container">
@@ -27,7 +27,15 @@
 <% if (note.length > 0) { %>
         <div class="active-title">
             <br><br>
-            YOUR CURRENT ENTRIES
+            YOUR PRIVATE ENTRIES
+            <form class="drop-down">
+                <select class="list" name="list" id="list" accesskey="target">
+                    <option value='none' selected>SORTED BY:</option>
+                    <option value="/notepad">NEWEST</option>
+                    <option value="/notepad/oldest">OLDEST</option>
+                </select>
+                <input class="list-button" type=button value=">>>" onclick="goToNewPage()" />
+            </form>
         </div>
     <% note.forEach(function(note) { %>   
             <div class="post-box">

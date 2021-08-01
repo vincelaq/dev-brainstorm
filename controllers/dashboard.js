@@ -6,21 +6,7 @@ module.exports = {
     index,
     create,
     sortOld,
-    sortComments,
 }
-
-function sortComments (req, res) {
-    User.findOne({'username': req.user.username})
-    .populate({path:'posts',options:{ sort:{createdAt : 1}}})
-    .exec((err, userPost) => {
-        let post = userPost.posts;
-        if (err) res.send(err);
-        res.render('dashboard/index', {
-            user: req.user,
-            post, 
-        });
-    })  
-};
 
 function sortOld (req, res) {
     User.findOne({'username': req.user.username})
