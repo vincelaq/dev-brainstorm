@@ -4,7 +4,8 @@ const router = require('express').Router();
 const ctrl = require("../controllers");
 
 router.get('/', isLoggedIn, ctrl.timeline.index);
-//router.post('/', isLoggedIn, ctrl.dashboard.create);
+router.get('/oldest', isLoggedIn, ctrl.timeline.sortOld);
+
 
 function isLoggedIn (req, res, next) {
     if (req.isAuthenticated()) return next();

@@ -3,6 +3,7 @@ const router = require('express').Router();
 const ctrl = require("../controllers");
 
 router.get('/', isLoggedIn, ctrl.dashboard.index);
+router.get('/oldest', isLoggedIn, ctrl.dashboard.sortOld);
 router.post('/', isLoggedIn, ctrl.dashboard.create);
 
 function isLoggedIn (req, res, next) {

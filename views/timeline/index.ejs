@@ -20,6 +20,15 @@
             <div id="Community-Posts-TL">
                 <% if (post.length > 0) { %>
                     <div class="active-title">
+                        COMMUNITY NETWORK POSTS
+                        <form class="drop-down">
+                            <select class="list" name="list" id="list" accesskey="target">
+                                <option value='none' selected>SORTED BY:</option>
+                                <option value="/timeline">NEWEST</option>
+                                <option value="/timeline/oldest">OLDEST</option>
+                            </select>
+                            <input class="list-button" type=button value=">>>" onclick="goToNewPage()" />
+                        </form>
                     </div>
                 <% post.forEach(function(post) { %>
                     <a id="community-posts" href="/posts/<%=post._id%>">    

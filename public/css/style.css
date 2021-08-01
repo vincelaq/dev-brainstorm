@@ -228,7 +228,7 @@
 .hr-timeline {
     border: 1px solid #005678;
     width: 700px;
-    margin: 5px auto;
+    margin: 5px auto 0px auto;
 }
 .post-text {
     width: 500px;
@@ -316,6 +316,20 @@
     letter-spacing: 4px;
     font-size: 12px;
 }
+.drop-down {
+    display: inline; 
+}
+.list-button {
+    background-color: transparent;
+    color: #05d9e8;
+    border: 1px solid #005678;
+}
+.list {
+    background-color: transparent;
+    border: none;
+    color: #05d9e8;
+    font-size: 16px;
+}
 #tl-Title {
     color: white;
     font-family: 'Orbitron', sans-serif;
@@ -330,7 +344,7 @@
     flex-direction: column;
     align-items: center;    
     padding: 5px 10px 15px 20px;
-    margin: 25px auto;
+    margin: 16px auto;
 }
 .comment-box-no-access {
     opacity: 40%;

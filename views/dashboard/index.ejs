@@ -28,7 +28,15 @@
 <% if (post.length > 0) { %>
         <div class="active-title">
             <br><br>
-            YOUR ACTIVE POSTS
+            YOUR NETWORK POSTS
+            <form class="drop-down">
+                <select class="list" name="list" id="list" accesskey="target">
+                    <option value='none' selected>SORTED BY:</option>
+                    <option value="/dashboard">NEWEST</option>
+                    <option value="/dashboard/oldest">OLDEST</option>
+                </select>
+                <input class="list-button" type=button value=">>>" onclick="goToNewPage()" />
+            </form>
         </div>
     <% post.forEach(function(post) { %>
         <a href="/posts/<%=post._id%>">    

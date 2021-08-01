@@ -21,3 +21,11 @@ $('textarea').each(function () {
   this.style.height = 'auto';
   this.style.height = (this.scrollHeight) + 'px';
 });
+
+// SORTING DROP DOWN MENU
+function goToNewPage() {
+  let url = document.getElementById('list').value;
+  if(url != 'none') {
+    window.location = url;
+  }
+};

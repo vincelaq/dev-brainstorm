@@ -79,7 +79,7 @@ AAU: I want to be able to connect with other users<br>
   - Add ability to create a new github repo with collaborators
   - Add follow GitHub users
   - More GitHub funtionality inside HackedIn
-- Add an entire private hackedin jornal entry system for private project ideas
+X Add an entire private hackedin jornal entry system for private project ideas
 - Edit upvote structure to be more efficient (currently embedded, but would like a referenced format for data efficiency)
 
 ## App Demo 
