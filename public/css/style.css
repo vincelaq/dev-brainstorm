@@ -349,6 +349,14 @@
 .comment-box-no-access {
     opacity: 40%;
 }
+#bottom-fade {
+	z-index: 99;
+	position: fixed;
+	height: 150px;
+    width: 98%;
+    bottom: 0%;
+	background-image: url("/images/fade.png");
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -368,6 +376,9 @@ footer {
     letter-spacing: 4px;
     margin-top: auto;
     padding: 25px 10px;
+}
+#footer-tag {
+    margin-top: 125px;
 }
 label {
     color: #05d9e8;
