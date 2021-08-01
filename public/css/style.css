@@ -116,7 +116,7 @@
     /* border: 1px solid purple; */
     display: flex;
     flex-direction: column;
-    margin-top: 36px;
+    margin-top: 16px;
     min-height: fit-content;
 }
 #profile-edit-button {
@@ -352,7 +352,7 @@
 #bottom-fade {
 	z-index: 99;
 	position: fixed;
-	height: 150px;
+	height: 125px;
     width: 98%;
     bottom: 0%;
 	background-image: url("/images/fade.png");
@@ -378,7 +378,7 @@ footer {
     padding: 25px 10px;
 }
 #footer-tag {
-    margin-top: 125px;
+    margin-top: 115px;
 }
 label {
     color: #05d9e8;
