@@ -73,13 +73,13 @@ AAU: I want to be able to connect with other users<br>
 
 ## Additional information:
 ### Future Updates
-- Option to order posts by "most comments", "most upvotes", or "most recent"
+- [x] Option to order posts by "Oldest", "Newest"
 - Add following/followers or friends functionality
 - Add more github integration such as:
   - Add ability to create a new github repo with collaborators
   - Add follow GitHub users
   - More GitHub funtionality inside HackedIn
-X Add an entire private hackedin jornal entry system for private project ideas
+- [x] Add an entire private hackedin jornal entry system for private project ideas
 - Edit upvote structure to be more efficient (currently embedded, but would like a referenced format for data efficiency)
 
 ## App Demo 
