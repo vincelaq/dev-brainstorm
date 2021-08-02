@@ -1,8 +1,11 @@
 // DECLARE DOCUMENT VARIABLES
 const profileButton = document.getElementById('profile-toggle');
 const profileDiv = document.getElementById('profile-container');
+const leftPaneButton = document.getElementById('hint');
+const leftPaneTitle = document.getElementById('page-title');
+const leftPaneDesc = document.getElementById('page-desc');
 
-// TOGGLE FUNCTION
+// TOGGLE FUNCTIONS
 function toggleProfile() {
     if (profileDiv.style.display === "flex") {
       profileDiv.style.display = "none";
@@ -10,9 +13,22 @@ function toggleProfile() {
       profileDiv.style.display = "flex";
     }
 };
+function toggleHint() {
+  if (leftPaneTitle.style.display === "block" && leftPaneDesc.style.display === "block") {
+    leftPaneTitle.style.display = "none";
+    leftPaneDesc.style.display = "none";
+    leftPaneButton.innerHTML = '[ + ]';
+  } else {
+    leftPaneTitle.style.display = "block";
+    leftPaneDesc.style.display = "block";
+    leftPaneButton.innerHTML = '[ - ]';
+  }
+}
 
-// TOGGLE EVENT LISTENER
+// TOGGLE EVENT LISTENERS
 profileButton.addEventListener("click", toggleProfile);
+leftPaneButton.addEventListener("click", toggleHint);
+
 
 // AUTO RESIZE TEXTAREA
 $('textarea').each(function () {
