@@ -9,9 +9,15 @@
     width: 224px;
 }
 #nav-header {
-    margin: 36px;
+    padding: 36px;
     display: flex;
     justify-content: space-between;
+    z-index: 99;
+	position: fixed;
+	height: 0px;
+    width: 95%;
+    top: 0%;
+	background-color: #01012b;
 }
 #nav-menu {
     display: flex;
@@ -145,7 +151,7 @@
 }  
 #enter-profile-container {
     border: 1px solid #d1f7ff;
-    width: 600px;
+    width: 648px;
     padding: 12px;
 }
 .notepad-content {
@@ -218,7 +224,7 @@
 }
 .hr3 {
     border: 1px solid #ff2a6d;
-    width: 598px;
+    width: 648px;
 }
 .hr-profile {
     border: 1px solid #005678;
@@ -231,7 +237,7 @@
     margin: 5px auto 0px auto;
 }
 .post-text {
-    width: 500px;
+    width: 646px;
     height: 26px;
     background-color: transparent; 
     border: none;
@@ -357,6 +363,15 @@
     bottom: 0%;
 	background-image: url("/images/fade.png");
 }
+#top-fade {
+	z-index: 99;
+	position: fixed;
+	height: 100px;
+    width: 98%;
+    top: 7%;
+	background-image: url("/images/fade-top.png");
+    background-repeat: repeat-x;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -368,6 +383,9 @@ a {
 body {
     background-color: #01012b;
     font-family: 'Quicksand', sans-serif;
+}
+main {
+    margin-top: 124px;
 }
 footer {
     color: #ff2a6d;

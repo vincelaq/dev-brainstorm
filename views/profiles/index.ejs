@@ -19,7 +19,7 @@
         <div id="enter-profile-container">
             <form id="post-form" action="/profiles/<%=user._id%>" method="POST">
                 <label>NAME //</label><input class="post-text profile-box" type="text" value="<%=user.name%>" name="name"><br>
-                <label>USERNAME //</label><input class="post-text profile-box" type="text" value="<%=user.username%>" name="username"><br>
+                <label>USERNAME (unchangeable) //</label><div class="post-text profile-box"><%=user.username%></div><br>
                 <label>EMAIL //</label><input class="post-text profile-box" type="text" value="<%=user.email%>" name="email"><br>
                 <label>TECH SKILLS //</label><input class="post-text profile-box" type="text" value="<%=user.techSkills%>" name="techSkills"><br>
                 <label>BIO //</label><input class="post-text profile-box" type="text" value="<%=user.bio%>" name="bio"><br>
