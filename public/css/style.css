@@ -52,7 +52,7 @@
     color: #05d9e8;
     font-size: 56px;
     letter-spacing: 6px;
-    writing-mode: vertical-rl;
+    margin-left: 24px;
 }
 #TL-title {
     color: #05d9e8;
@@ -62,10 +62,9 @@
 }
 #page-desc {
     color: #ff2a6d;
-    font-size: 10px;
-    letter-spacing: 0;
-    line-height: 10px;
-    writing-mode: vertical-rl;
+    font-size: 12px;
+    letter-spacing: 4px;
+    line-height: 16px;
     text-align: right;
     margin-left: 24px;
 }
@@ -153,6 +152,12 @@
     border: 1px solid #d1f7ff;
     width: 648px;
     padding: 12px;
+}
+.hint {
+    background-color: #01012b;
+    border: none;
+    color: #05d9e8;
+    margin-left: 24px;
 }
 .notepad-content {
     resize: none;
@@ -377,10 +382,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
-/*#community-posts {
-}
-*/
-
 body {
     background-color: #01012b;
     font-family: 'Quicksand', sans-serif;
@@ -406,3 +407,16 @@ label {
     color: white;
     opacity: .6; /* Firefox */
 }
+@media only screen 
+      and (min-device-width: 900px) 
+      and (max-device-width: 1650px) {
+        #page-title {
+            font-size: 32px;
+        }
+        #page-desc {
+            font-size: 10px;
+            letter-spacing: 0px;
+
+        }
+
+    }
