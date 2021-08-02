@@ -369,7 +369,7 @@
 	position: fixed;
 	height: 100px;
     width: 98%;
-    top: 7%;
+    top: 70px;
 	background-image: url("/images/fade-top.png");
     background-repeat: repeat-x;
 }
