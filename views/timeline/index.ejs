@@ -65,76 +65,7 @@
           
     </section>
     <section id="right" class="main-divider">
-        <div id="profile-container">
-            <div id="profile-title" class="right-profile">// USER PROFILE</div>
-            <div id="profile-avatar-container" class="right-profile">
-                <img class="avatar-icon" src="<%=user.avatar%>">
-            </div>
-            <div id="profile-name">
-                <div class="profile-ans">
-                    <% if (user.name) {%>
-                    <%=user.name%>
-                    <%} else {%>
-                        null
-                    <%}%>
-                </div>
-                <div class="hr-profile"></div>
-                <div class="profile-cat">NAME</div>
-            </div>
-            <br>
-            <div id="profile-username">
-                <div class="profile-ans">
-                    <% if (user.username) {%>
-                        <%=user.username%>
-                        <%} else {%>
-                            null
-                        <%}%>
-                </div>
-                <div class="hr-profile"></div>
-                <div class="profile-cat">ALIAS</div>
-            </div>
-            <br>
-            <div id="profile-email">
-                <div class="profile-ans">
-                    <% if (user.email) {%>
-                        <%=user.email%>
-                        <%} else {%>
-                            null
-                        <%}%>
-                </div>
-                <div class="hr-profile"></div>
-                <div class="profile-cat">EMAIL</div>
-            </div>
-            <br>
-            <div id="profile-skills">
-                <div class="profile-ans">
-                    <% if (user.techSkills) {%>
-                        <%=user.techSkills%>
-                        <%} else {%>
-                            null
-                        <%}%>
-                </div>
-                <div class="hr-profile"></div>
-                <div class="profile-cat">SKILLS</div>
-            </div>
-            <br>
-            <div id="profile-bio">
-                <div class="profile-ans">
-                    <% if (user.bio) {%>
-                        <%=user.bio%>
-                        <%} else {%>
-                            null
-                        <%}%>
-                </div>
-                <div class="hr-profile"></div>
-                <div class="profile-cat">BIO</div>
-            </div>
-            <br>
-            <div id="profile-edit">
-                <div class="hr" style="width: 100%; margin-top: auto;"></div>
-                <a href="/profiles/<%=user._id%>"><button id="profile-edit-button">EDIT PROFILE</button></a>
-            </div>
-        </div>
+        <%- include('../partials/profile') %>
     </section>
 </div>
 

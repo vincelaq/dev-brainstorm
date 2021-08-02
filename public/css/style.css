@@ -53,6 +53,7 @@
     font-size: 56px;
     letter-spacing: 6px;
     margin-left: 24px;
+    margin-right: 16px;
 }
 #TL-title {
     color: #05d9e8;
@@ -67,6 +68,7 @@
     line-height: 16px;
     text-align: right;
     margin-left: 24px;
+    margin-right: 16px;
 }
 #right-TL {
     position: relative; 
@@ -78,7 +80,7 @@
 }
 #right {
     min-width: 400px;
-    min-height: 500px;
+    min-height: fit-content;
 }
 #post-form {
     display: flex;
@@ -100,8 +102,9 @@
 }
 #profile-container {
     border: 1px solid #ff2a6d;
-    height:100%;
+    height: fit-content;
     margin-right: 24px;
+    margin-left: 24px;
     display: none;
     flex-direction: column;
 }
@@ -121,14 +124,17 @@
     /* border: 1px solid purple; */
     display: flex;
     flex-direction: column;
-    margin-top: 16px;
+    margin-top: 4px;
     min-height: fit-content;
 }
+/* #profile-edit:hover {
+    text-shadow: 0px 0px 5px #ff2a6d;
+} */
 #profile-edit-button {
     background-color: transparent;
     text-align: right;
-    color: #ff2a6d;
-    border: none;
+    color: #05d9e8;
+    border: 1px solid #005678;
     letter-spacing: 2px;
     padding-top: 4px;
 }
@@ -234,7 +240,7 @@
 }
 .hr-profile {
     border: 1px solid #005678;
-    width: 360px;
+    width: 356px;
     margin: 5px auto;
 }
 .hr-timeline {
@@ -409,12 +415,12 @@ label {
 }
 @media only screen 
       and (min-device-width: 900px) 
-      and (max-device-width: 1650px) {
+      and (max-device-width: 1675px) {
         #page-title {
             font-size: 32px;
         }
         #page-desc {
-            font-size: 10px;
+            font-size: 12px;
             letter-spacing: 0px;
 
         }
