@@ -2,18 +2,24 @@
 <div id="main-container">
     <section id="left" class="main-divider">
         <div id="left-pane-title">
-            <div id="page-desc">
-                // in this view you can see other's profile info. <br>
-                // Everyone's default info is from Github.<br>
-                // Users are able to edit their own info from their profile popup.<br>
-            </div><br>
+        <button class="hint">[ + ]</button>    
+            <br><br>
             <div id="page-title">
                 VIEW PROFILE
+            </div><br>
+            <div id="page-desc">
+                // this is where you can see a user's <br>
+                // personal profile. Their default <br>
+                // information is from github. <br>
+                // add collaborator function <br>
+                // is under construction. <br>
             </div>
         </div>
     </section>
     <section id="center" class="main-divider">
-        <div id="profile-title" class="right-profile">// VIEW PROFILE</div>
+        <div id=tl-Title>
+            <h1><%=one.username%>'s Profile</h1>
+        </div>
         <div id="enter-profile-container">
             <div>
                 <img class="avatar-icon" src="<%=one.avatar%>"><br>
