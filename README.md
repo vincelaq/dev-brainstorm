@@ -1,5 +1,8 @@
 # HackedIN
 
+## App Demo 
+[Link to GitHub project on Heroku)](https://hackedin.herokuapp.com/)
+
 ## Concept: 
 HackedIn is a developer community message board where you can brainstorm, socialize and look to collaborate with others.
 
