@@ -6,6 +6,7 @@ module.exports = {
     sortOld
 };
 
+// SORT POSTS BY OLDEST
 function sortOld (req, res) {
     Post.find({})
     .populate('comments', 'user')
@@ -20,6 +21,7 @@ function sortOld (req, res) {
     })
 };
 
+// RENDER ALL POSTS IN DATABASE
 function index (req, res) {
     Post.find({})
     .populate('comments', 'user')

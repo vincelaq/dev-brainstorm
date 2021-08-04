@@ -11,6 +11,8 @@ module.exports = {
     update,
     updateComment,
 }
+
+// UPDATING COMMENT UPVOTES
 function updateComment (req, res) {
     Comment.findOne({ "_id": req.params.idComment})
         .then((comment) => {
@@ -33,6 +35,7 @@ function updateComment (req, res) {
         })
 };
 
+// UPDATING POST UPVOTES
 function update (req, res) {
     Post.findOne({ "_id": req.params.id})
         .then((post) => {
@@ -55,6 +58,7 @@ function update (req, res) {
         })
 };
 
+// DELETING COMMENTS
 function deleteComment (req, res) {
     Comment.findByIdAndDelete(req.params.idComment)
     .then((err) => {
@@ -63,6 +67,7 @@ function deleteComment (req, res) {
     })
 };
 
+// DELETING POSTS
 function deletePost (req, res) {
    
     Post.findByIdAndDelete(req.params.id)
@@ -81,6 +86,7 @@ function deletePost (req, res) {
     })  
 };
 
+// CREATING A COMMENT
 function create (req, res) {
     req.body.user = req.user.id;
     req.body.username = req.user.username;
@@ -105,6 +111,7 @@ function create (req, res) {
     res.redirect(`${req.params.id}`);
 };
 
+// RENDERING A SELECTED POST AND ITS COMMENTS/UPVOTES
 function index (req, res) {
     Post.findOne({'_id': req.params.id})
     .populate('comments')

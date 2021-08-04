@@ -9,6 +9,7 @@ module.exports = {
     sortOld,
 }
 
+// SORTING BY OLDEST PRIVATE ENTRIES
 function sortOld (req, res) {
     User.findOne({'username': req.user.username})
     .populate({path:'notepad',options:{ sort:{createdAt : 1}}})
@@ -22,6 +23,7 @@ function sortOld (req, res) {
     })  
 };
 
+// UPDATING A SPECIFIC POST
 function update (req, res) {
     Notepad.findByIdAndUpdate(req.params.id, {
         title: req.body.title,
@@ -32,6 +34,7 @@ function update (req, res) {
     })
 };
 
+// DELETING AN ENTRY
 function deleteEntry (req, res) {
     Notepad.findByIdAndDelete(req.params.id)
     .then((err) => {
@@ -40,6 +43,7 @@ function deleteEntry (req, res) {
     })
 };
 
+// CREATING AN ENTRY
 function create (req, res) {
     req.body.user = req.user.id;
     req.body.username = req.user.username;
@@ -58,6 +62,7 @@ function create (req, res) {
     })
 };
 
+// RENDERING USER'S PRIVATE ENTRIES
 function index (req, res) {
     User.findOne({'username': req.user.username})
     .populate({path:'notepad',options:{ sort:{createdAt : -1}}})

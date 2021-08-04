@@ -7,6 +7,7 @@ module.exports = {
     show,
 };
 
+// SHOW A SELECTED USER'S PROFILE
 function show (req, res) {
     User.findOne({'username': req.params.showId}, (err, one) => {
         console.log(one);
@@ -18,6 +19,7 @@ function show (req, res) {
     })
 };
 
+// UPDATE USER'S PROFILE
 function update (req, res) {
     User.findByIdAndUpdate(req.params.id, {
         name: req.body.name,
@@ -32,6 +34,7 @@ function update (req, res) {
     })
 };
 
+// RENDER USER PROFILE
 function index (req, res) {
     res.render('profiles/index', {
         user: req.user,

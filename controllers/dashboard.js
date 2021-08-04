@@ -8,6 +8,7 @@ module.exports = {
     sortOld,
 }
 
+// SORTING BY USER'S OLDEST POST
 function sortOld (req, res) {
     User.findOne({'username': req.user.username})
     .populate({path:'posts',options:{ sort:{createdAt : 1}}})
@@ -21,6 +22,7 @@ function sortOld (req, res) {
     })  
 };
 
+// CREATING A NEW POST
 function create (req, res) {
     req.body.user = req.user.id;
     req.body.username = req.user.username;
@@ -39,6 +41,7 @@ function create (req, res) {
     })
 };
 
+// RENDERING USER'S DASHBOARD
 function index (req, res) {
     User.findOne({'username': req.user.username})
     .populate({path:'posts',options:{ sort:{createdAt : -1}}})
